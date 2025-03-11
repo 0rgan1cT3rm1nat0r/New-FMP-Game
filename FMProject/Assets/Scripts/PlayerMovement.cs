@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
+    private bool left;
+    private bool right;
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
@@ -17,14 +19,17 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        left = Input.GetKeyDown("a");
+        right = Input.GetKeyDown("d");
+
         if (Input.GetKeyDown("w") && IsGrounded())
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpingPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
         if (Input.GetKeyUp("w") && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
         Flip();
