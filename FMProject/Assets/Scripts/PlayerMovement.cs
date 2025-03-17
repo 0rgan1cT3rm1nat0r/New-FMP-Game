@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float horizontal;
-    private bool left;
-    private bool right;
+    public Animator animator;
+    private float horizontal = 0;
     public float speed = 8f;
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
+    private bool idle = true;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform groundCheck;
@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, jumpingPower, rb.velocity.z); // Add jump force on the y-axis
         }
 
+        animator.SetFloat("horizontal", horizontal);
+
         // Smooth out jumping (reducing upward force when the jump key is released)
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
         {
@@ -41,6 +43,14 @@ public class PlayerMovement : MonoBehaviour
     {
         // Move the player in the X-axis and maintain current Y and Z velocity (for gravity)
         rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, rb.velocity.z);
+        if (horizontal == 0)
+        {
+            idle = true;
+        }
+        else if (horizontal >= 0 && horizontal <= 0)
+        {
+            idle = false;
+        }
     }
 
     private bool IsGrounded()
