@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,27 +16,35 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    private bool isGrounded;
+    public bool isGrounded;
 
     void Update()
     {
+        IsGrounded();
+
         // Get horizontal input
         horizontal = Input.GetAxisRaw("Horizontal");
 
         // Check for jump input
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if (Input.GetKey(KeyCode.W) && IsGrounded())
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpingPower, rb.velocity.z); // Add jump force on the y-axis
         }
 
-        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.A) && IsGrounded())
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) && IsGrounded())
         {
             isRunning = true;
+           // animator.SetBool("running", true);
         }
+
         else
         {
             isRunning = false;
+            // animator.SetBool("running", false);
         }
+
+
+
 
         animator.SetFloat("horizontal", horizontal);
         animator.SetBool("idle", idle);
