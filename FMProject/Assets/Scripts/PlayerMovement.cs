@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
     private bool idle = true;
+    private bool isRunning = false;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform groundCheck;
@@ -27,7 +28,19 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, jumpingPower, rb.velocity.z); // Add jump force on the y-axis
         }
 
+        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.A) && IsGrounded())
+        {
+            isRunning = true;
+        }
+        else
+        {
+            isRunning = false;
+        }
+
         animator.SetFloat("horizontal", horizontal);
+        animator.SetBool("idle", idle);
+        animator.SetBool("grounded", isGrounded);
+        animator.SetBool("running", isRunning);
 
         // Smooth out jumping (reducing upward force when the jump key is released)
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)
@@ -47,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         {
             idle = true;
         }
-        else if (horizontal >= 0 && horizontal <= 0)
+        else if (horizontal == 1 && horizontal == -1)
         {
             idle = false;
         }
