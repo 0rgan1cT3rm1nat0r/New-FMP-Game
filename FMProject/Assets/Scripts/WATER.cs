@@ -12,6 +12,7 @@ public class WATER : MonoBehaviour
     //normal height
     private float target_height = 0f;
 }
+/*
 public void WaveSpringUpdate( float springStiffness )
 {
     height = tranform.localPosition.y;
@@ -44,3 +45,4 @@ public void WaterSpringUpdate( float springStiffness, float dampening ) {
         tranform.localPosition = new Vector3(tranform.localPosition.x, y+velocity, tranform.localPosition.z);
     }
 }
+*/
