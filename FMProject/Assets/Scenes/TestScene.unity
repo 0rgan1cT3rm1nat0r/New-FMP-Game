@@ -9382,9 +9382,10 @@ GameObject:
   - component: {fileID: 2032724670}
   - component: {fileID: 2032724669}
   - component: {fileID: 2032724668}
+  - component: {fileID: 2032724672}
   m_Layer: 0
   m_Name: P2
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9471,12 +9472,39 @@ Transform:
   m_GameObject: {fileID: 2032724667}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.29, y: 12.428932, z: 1.46}
+  m_LocalPosition: {x: 6, y: 12.428932, z: 1.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2032724672
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032724667}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 8
+  m_CollisionDetection: 0
 --- !u!1 &2053097473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1531717240345016928, guid: b0fb9c779bf43be42b18b5a6f50a2321, type: 3}
@@ -9710,12 +9738,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player cube
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3575340995181084636, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4188769034861130524, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 3409424401709268063}
   m_SourcePrefab: {fileID: 100100000, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+--- !u!1 &3409424401709268062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4188769034861130524, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+  m_PrefabInstance: {fileID: 3409424401709268061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3409424401709268063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409424401709268062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532de927ff68c964ca1a32ed18cf9230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1505492394}
+  damageAmount: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
