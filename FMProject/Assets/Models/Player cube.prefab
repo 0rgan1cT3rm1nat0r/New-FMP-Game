@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 5672721275174213585}
   m_Layer: 0
   m_Name: Player cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,6 +141,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  isGrounded: 0
 --- !u!54 &6735247138022371257
 Rigidbody:
   m_ObjectHideFlags: 0
