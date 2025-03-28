@@ -197,6 +197,12 @@ AnimatorController:
   m_Name: Player cube
   serializedVersion: 5
   m_AnimatorParameters:
+  - m_Name: horizontal
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   - m_Name: grounded
     m_Type: 4
     m_DefaultFloat: 0
@@ -332,7 +338,7 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1073215792764007918}
-    m_Position: {x: 360, y: 170, z: 0}
+    m_Position: {x: 365, y: 355, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
