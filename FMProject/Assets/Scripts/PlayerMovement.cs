@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool idle = true;
     private bool isRunning = false;
+    private bool isAttacking = false;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform groundCheck;
@@ -43,6 +44,15 @@ public class PlayerMovement : MonoBehaviour
             // animator.SetBool("running", false);
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isAttacking = true;
+        }
+
+        else
+        {
+            isAttacking = false;
+        }
 
 
 
@@ -50,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("idle", idle);
         animator.SetBool("grounded", isGrounded);
         animator.SetBool("running", isRunning);
+        animator.SetBool("shooting", isAttacking);
 
         // Smooth out jumping (reducing upward force when the jump key is released)
         if (Input.GetKeyUp(KeyCode.W) && rb.velocity.y > 0f)

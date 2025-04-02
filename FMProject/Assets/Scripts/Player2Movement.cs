@@ -46,7 +46,7 @@ public class Player2Movement : MonoBehaviour
 
 
 
-        animator.SetFloat("horizontal", horizontal);
+        //animator.SetFloat("horizontal", horizontal);
         animator.SetBool("idle", idle);
         animator.SetBool("grounded", isGrounded);
         animator.SetBool("running", isRunning);
