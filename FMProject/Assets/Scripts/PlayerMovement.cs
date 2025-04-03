@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) && IsGrounded())
         {
             isRunning = true;
-           // animator.SetBool("running", true);
+            // animator.SetBool("running", true);
         }
 
         else
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        animator.SetFloat("horizontal", horizontal);
+        //animator.SetFloat("horizontal", horizontal);
         animator.SetBool("idle", idle);
         animator.SetBool("grounded", isGrounded);
         animator.SetBool("running", isRunning);

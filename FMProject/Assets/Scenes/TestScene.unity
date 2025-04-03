@@ -3978,7 +3978,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 30
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4016,7 +4016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056500076}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3202732e60a730e4aa0374e82c3b3834, type: 3}
   m_Name: 
@@ -4544,6 +4544,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4543415484274554393, guid: f387290f641bcc24ebaa9da160c7ba74, type: 3}
+--- !u!4 &1273875555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8172249382434261408, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+  m_PrefabInstance: {fileID: 3409424401709268061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1303949525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7189,6 +7194,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4188769034861130524, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
       insertIndex: 3
+      addedObject: {fileID: 3409424401709268067}
+    - targetCorrespondingSourceObject: {fileID: 4188769034861130524, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+      insertIndex: 4
       addedObject: {fileID: 3409424401709268063}
   m_SourcePrefab: {fileID: 100100000, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
 --- !u!1 &3409424401709268062 stripped
@@ -7210,6 +7218,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1505492394}
   damageAmount: 2
+--- !u!95 &3409424401709268064 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5672721275174213585, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+  m_PrefabInstance: {fileID: 3409424401709268061}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3409424401709268067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3409424401709268062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fa9592549ec414bb486a1273a45775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3409424401709268064}
+  speed: 8
+  jumpingPower: 16
+  rb: {fileID: 3409424401709268068}
+  groundCheck: {fileID: 1273875555}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  isGrounded: 1
+--- !u!54 &3409424401709268068 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6735247138022371257, guid: 8a307322dfb86b944aa931953ae80268, type: 3}
+  m_PrefabInstance: {fileID: 3409424401709268061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5927313680091083955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class enemyPatrol : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
-        anim.SetBool("isRunning", true);
+        //anim.SetBool("isRunning", true);
     }
 
     // Update is called once per frame
