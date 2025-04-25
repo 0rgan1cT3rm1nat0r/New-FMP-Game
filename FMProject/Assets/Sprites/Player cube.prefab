@@ -40,8 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5030798370868459965}
+  - component: {fileID: 7952430796567896084}
   m_Layer: 0
-  m_Name: target
+  m_Name: shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +63,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3160547880029916095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7952430796567896084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783391636228876684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f09edd573463f040ad2d4d373d8d1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  target: {fileID: 0}
+  shootRate: 0
+  projectileMoveSpeed: 20
 --- !u!1 &4188769034861130524
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3160547880029916095}
   - component: {fileID: 406830947709521004}
-  - component: {fileID: 8982080462720497394}
+  - component: {fileID: 3761691148841492415}
+  - component: {fileID: 6127322133107237996}
   - component: {fileID: 6735247138022371257}
   - component: {fileID: 7706366649288670984}
   - component: {fileID: 3575340995181084636}
@@ -153,7 +171,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8982080462720497394
+--- !u!114 &3761691148841492415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,32 +180,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 4188769034861130524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f09edd573463f040ad2d4d373d8d1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 73fa9592549ec414bb486a1273a45775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5866716077487334619, guid: e8670e79fe027fb4897fdaa9ebf90536, type: 3}
-  target: {fileID: 5030798370868459965}
-  shootRate: 1
-  projectileMaxMoveSpeed: 0
-  projectileMaxHeight: 0
-  trajectoryAnimationCurve:
+  animator: {fileID: 5672721275174213585}
+  speed: 8
+  jumpingPower: 16
+  rb: {fileID: 6735247138022371257}
+  groundCheck: {fileID: 8172249382434261408}
+  groundLayer:
     serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  axisCorrectionAnimationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  projectileSpeedAnimationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_Bits: 8
+  isGrounded: 1
+--- !u!114 &6127322133107237996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188769034861130524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532de927ff68c964ca1a32ed18cf9230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  damageAmount: 2
 --- !u!54 &6735247138022371257
 Rigidbody:
   m_ObjectHideFlags: 0
