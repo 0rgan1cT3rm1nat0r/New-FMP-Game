@@ -10,13 +10,13 @@ public class Shooter : MonoBehaviour
 
 
     [SerializeField] private float shootRate;
-    [SerializeField] private float projectileMaxMoveSpeed;
-    [SerializeField] private float projectileMaxHeight;
+    [SerializeField] private float projectileMoveSpeed;
+    //[SerializeField] private float projectileMaxHeight;
 
 
-    [SerializeField] private AnimationCurve trajectoryAnimationCurve;
-    [SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
-    [SerializeField] private AnimationCurve projectileSpeedAnimationCurve;
+    //[SerializeField] private AnimationCurve trajectoryAnimationCurve;
+    //[SerializeField] private AnimationCurve axisCorrectionAnimationCurve;
+    //[SerializeField] private AnimationCurve projectileSpeedAnimationCurve;
 
 
     private float shootTimer;
@@ -33,8 +33,8 @@ public class Shooter : MonoBehaviour
             Projectile projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity).GetComponent<Projectile>();
 
 
-            projectile.InitializeProjectile(target, projectileMaxMoveSpeed, projectileMaxHeight);
-            projectile.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, projectileSpeedAnimationCurve);
+            projectile.InitializeProjectile(target, projectileMoveSpeed);
+            //projectile.InitializeAnimationCurves(trajectoryAnimationCurve, axisCorrectionAnimationCurve, projectileSpeedAnimationCurve);
         }
     }
 }
