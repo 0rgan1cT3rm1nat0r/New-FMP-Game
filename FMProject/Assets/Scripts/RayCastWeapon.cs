@@ -13,7 +13,7 @@ public class RayCastWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("F"))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             StartCoroutine(Shoot());
         }

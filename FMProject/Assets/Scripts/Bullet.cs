@@ -29,4 +29,10 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnBecameInvisible()
+    {
+        enabled = false;
+        Destroy(gameObject);
+    }
+
 }
