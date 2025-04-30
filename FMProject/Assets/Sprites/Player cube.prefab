@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3160547880029916095}
   - component: {fileID: 406830947709521004}
   - component: {fileID: 3761691148841492415}
+  - component: {fileID: 3642853894970589296}
   - component: {fileID: 6127322133107237996}
   - component: {fileID: 6735247138022371257}
   - component: {fileID: 7706366649288670984}
@@ -192,6 +193,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isGrounded: 1
+--- !u!114 &3642853894970589296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188769034861130524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88d22fce1dca374c81269e84969322e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 5030798370868459965}
+  bulletPrefab: {fileID: 0}
 --- !u!114 &6127322133107237996
 MonoBehaviour:
   m_ObjectHideFlags: 0
