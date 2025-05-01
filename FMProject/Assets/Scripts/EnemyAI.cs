@@ -1,9 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    public float detectionRange = 10f;
+    public float attackRange = 2f;
+    public float attackCooldown = 2f;
+
+    private NavMeshAgent agent;
+    private Animator anim;
+    private GameObject player;
+    private float lastAttackTime;
+
+    void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    void Update()
+    {
+        if (player == null) return;
+
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+
+        if (distance <= detectionRange)
+        {
+            agent.SetDestination(player.transform.position);
+
+            if (distance <= attackRange)
+            {
+                agent.isStopped = true;
+
+                // Face the player
+                Vector3 direction = (player.transform.position - transform.position).normalized;
+                Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+
+                TryAttack();
+            }
+            else
+            {
+                agent.isStopped = false;
+                anim.SetBool("isRunning", true);
+            }
+        }
+        else
+        {
+            agent.isStopped = true;
+            anim.SetBool("isRunning", false);
+        }
+    }
+
+    void TryAttack()
+    {
+        if (Time.time - lastAttackTime >= attackCooldown)
+        {
+            lastAttackTime = Time.time;
+            anim.SetTrigger("attack");
+            // Add attack logic here (e.g., damage player, play sound)
+        }
+    }
+
+
+
+
+    /*
     private float angle;
     public float speed;
     public float checkRadius;
@@ -65,4 +130,5 @@ public class EnemyAI : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * Time.deltaTime));
     }
+    */
 }
