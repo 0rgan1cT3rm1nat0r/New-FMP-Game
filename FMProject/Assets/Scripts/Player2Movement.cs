@@ -12,6 +12,7 @@ public class Player2Movement : MonoBehaviour
     private bool isFacingRight = true;
     private bool idle = true;
     private bool isRunning = false;
+    private bool isAttacking = false;
 
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform groundCheck;
@@ -43,13 +44,23 @@ public class Player2Movement : MonoBehaviour
             // animator.SetBool("running", false);
         }
 
+        if (Input.GetKey(KeyCode.Keypad0))
+        {
+            isAttacking = true;
+            Debug.Log("Is this working?");
+        }
 
+        else
+        {
+            isAttacking = false;
+        }
 
 
         //animator.SetFloat("horizontal", horizontal);
         animator.SetBool("idle", idle);
         animator.SetBool("grounded", isGrounded);
         animator.SetBool("running", isRunning);
+        animator.SetBool("shooting", isAttacking);
 
         // Smooth out jumping (reducing upward force when the jump key is released)
         if (Input.GetKeyUp(KeyCode.UpArrow) && rb.velocity.y > 0f)
@@ -92,3 +103,61 @@ public class Player2Movement : MonoBehaviour
         }
     }
 }
+
+
+/*
+public class PlayerMovement : MonoBehaviour
+{
+    private float horizontal;
+    private bool left;
+    private bool right;
+    private float speed = 8f;
+    private float jumpingPower = 16f;
+    private bool isFacingRight = true;
+
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+
+    void Update()
+    {
+        horizontal = Input.GetAxisRaw("Horizontal");
+
+        left = Input.GetKeyDown("a");
+        right = Input.GetKeyDown("d");
+
+        if (Input.GetKeyDown("w") && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
+        if (Input.GetKeyUp("w") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        Flip();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+    }
+
+    private bool IsGrounded()
+    {
+        Debug.Log("Grounded");
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
+}*/

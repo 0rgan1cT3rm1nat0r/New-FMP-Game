@@ -24,7 +24,7 @@ public class ShooterDirection2 : MonoBehaviour
         // If there is input in any direction, use it
         if (Mathf.Abs(vertical) > 0.1f || Mathf.Abs(horizontal) > 0.1f)
         {
-            direction = new Vector3(-vertical, horizontal, 0f);
+            direction = new Vector3(vertical, horizontal, 0f);
         }
         else
         {

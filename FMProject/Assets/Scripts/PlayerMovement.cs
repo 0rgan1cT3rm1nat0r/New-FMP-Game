@@ -55,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-
         //animator.SetFloat("horizontal", horizontal);
         animator.SetBool("idle", idle);
         animator.SetBool("grounded", isGrounded);
