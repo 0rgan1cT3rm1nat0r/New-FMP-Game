@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
     private Animator anim;
     private GameObject player;
+    private GameObject player2;
     private float lastAttackTime;
 
     void Start()
@@ -19,11 +20,12 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+        player2 = GameObject.FindGameObjectWithTag("Player2");
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (player && player2 == null) return;
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
