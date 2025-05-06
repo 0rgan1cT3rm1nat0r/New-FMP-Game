@@ -44,7 +44,7 @@ public class Player2Movement : MonoBehaviour
             // animator.SetBool("running", false);
         }
 
-        if (Input.GetKey(KeyCode.Keypad0))
+        if (Input.GetKeyDown(KeyCode.Keypad0))
         {
             isAttacking = true;
             Debug.Log("Is this working?");

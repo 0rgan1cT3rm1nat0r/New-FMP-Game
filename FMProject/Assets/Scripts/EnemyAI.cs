@@ -19,28 +19,35 @@ public class EnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+
         player = GameObject.FindGameObjectWithTag("Player");
         player2 = GameObject.FindGameObjectWithTag("Player2");
     }
 
     void Update()
     {
-        if (player && player2 == null) return;
+        if (player == null && player2 == null)
+            return;
 
-        float distance = Vector3.Distance(transform.position, player.transform.position);
+        GameObject targetPlayer = GetClosestPlayer();
+
+        if (targetPlayer == null)
+            return;
+
+        float distance = Vector3.Distance(transform.position, targetPlayer.transform.position);
 
         if (distance <= detectionRange)
         {
-            agent.SetDestination(player.transform.position);
+            agent.SetDestination(targetPlayer.transform.position);
 
             if (distance <= attackRange)
             {
                 agent.isStopped = true;
 
-                // Face the player
-               // Vector3 direction = (player.transform.position - transform.position).normalized;
-              //  Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-              //  transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+                // Optional: rotate to face target
+                Vector3 direction = (targetPlayer.transform.position - transform.position).normalized;
+                Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 
                 TryAttack();
             }
@@ -57,80 +64,26 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    GameObject GetClosestPlayer()
+    {
+        float distanceToPlayer1 = player != null ? Vector3.Distance(transform.position, player.transform.position) : Mathf.Infinity;
+        float distanceToPlayer2 = player2 != null ? Vector3.Distance(transform.position, player2.transform.position) : Mathf.Infinity;
+
+        if (distanceToPlayer1 < distanceToPlayer2)
+            return player;
+        else if (distanceToPlayer2 < distanceToPlayer1)
+            return player2;
+        else
+            return null;
+    }
+
     void TryAttack()
     {
         if (Time.time - lastAttackTime >= attackCooldown)
         {
             lastAttackTime = Time.time;
             anim.SetTrigger("attack");
-            // Add attack logic here (e.g., damage player, play sound)
+            // Add attack logic here (e.g., damage the player, play sound)
         }
     }
-
-
-
-
-    /*
-    private float angle;
-    public float speed;
-    public float checkRadius;
-    public float attackRadius;
-
-    public bool chasing;
-
-    public LayerMask whatIsPlayer;
-
-    private Transform target, enemy;
-    private Rigidbody2D rb;
-    private Animator anim;
-    private Vector2 movement;
-    public Vector3 direction;
-
-    private bool isInChaseRange;
-    private bool isInAttackRange;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        target = GameObject.FindWithTag("Player").transform;
-    }
-    private void Update()
-    {
-        anim.SetBool("isRunning", isInChaseRange);
-
-        isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
-
-        direction = target.position - transform.position;
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        direction.Normalize();
-        movement = direction;
-        if (chasing)
-        {
-            anim.SetFloat("Horizontal", direction.x);
-            anim.SetFloat("Vertical", direction.y);
-        }
-
-    }
-
-    private void FixedUpdate()
-    {
-        if (isInChaseRange && !isInAttackRange)
-        {
-            MoveCharacter(movement);
-        }
-
-        if (isInAttackRange)
-        {
-            rb.velocity = Vector2.zero;
-
-        }
-    }
-
-    private void MoveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * Time.deltaTime));
-    }
-    */
 }

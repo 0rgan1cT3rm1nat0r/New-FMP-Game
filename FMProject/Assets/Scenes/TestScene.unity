@@ -987,6 +987,14 @@ PrefabInstance:
       propertyPath: impactEffect
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4448318361166135108, guid: e8670e79fe027fb4897fdaa9ebf90536, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609873698079487602, guid: e8670e79fe027fb4897fdaa9ebf90536, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5866716077487334619, guid: e8670e79fe027fb4897fdaa9ebf90536, type: 3}
       propertyPath: m_Name
       value: projectilePrefab
