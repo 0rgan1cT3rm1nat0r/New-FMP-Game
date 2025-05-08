@@ -15,6 +15,10 @@ public class EnemyAI : MonoBehaviour
     private GameObject player2;
     private float lastAttackTime;
 
+    private SpriteRenderer spriteRenderer;
+
+    public Transform visual;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -22,6 +26,10 @@ public class EnemyAI : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         player2 = GameObject.FindGameObjectWithTag("Player2");
+
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        visual = transform.Find("Sprite"); // or assign in Inspector
     }
 
     void Update()
@@ -40,18 +48,27 @@ public class EnemyAI : MonoBehaviour
         {
             agent.SetDestination(targetPlayer.transform.position);
 
+            // Rotate entire GameObject to face movement direction (left/right)
+            if (agent.velocity.x < -0.1f)
+                transform.rotation = Quaternion.Euler(0f, 180f, 0f);  // Face left
+            else if (agent.velocity.x > 0.1f)
+                transform.rotation = Quaternion.Euler(0f, 0f, 0f);    // Face right
+
+            /*
+            // Flip sprite based on movement direction
+            if (agent.velocity.x < -0.1f)
+                spriteRenderer.flipX = true;
+            else if (agent.velocity.x > 0.1f)
+                spriteRenderer.flipX = false;
+            */
+
             if (distance <= attackRange)
             {
                 agent.isStopped = true;
 
-                // Optional: rotate to face target
-                /*
-                Vector3 direction = (targetPlayer.transform.position - transform.position).normalized;
-                Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-                */
                 TryAttack();
             }
+
             else
             {
                 agent.isStopped = false;
@@ -85,6 +102,7 @@ public class EnemyAI : MonoBehaviour
             lastAttackTime = Time.time;
             anim.SetTrigger("attack");
             // Add attack logic here (e.g., damage the player, play sound)
+
         }
     }
 }

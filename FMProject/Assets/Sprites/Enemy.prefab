@@ -212,3 +212,4 @@ MonoBehaviour:
   detectionRange: 10
   attackRange: 2
   attackCooldown: 2
+  visual: {fileID: 0}
