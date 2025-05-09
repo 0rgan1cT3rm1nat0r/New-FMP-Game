@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5da70a586e613c4ba3ba9afa880c6e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 200
   deathEffect: {fileID: 0}
 --- !u!212 &4444834164581387904
 SpriteRenderer:

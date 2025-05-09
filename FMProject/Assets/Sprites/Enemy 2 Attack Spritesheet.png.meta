@@ -1,0 +1,782 @@
+fileFormatVersion: 2
+guid: 5f629a265c67f9d45849e2fbe5fb7d1d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b71fd1fb3924f428c278c64a3cc474
+      internalID: 131791993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c45e2e3878686e42a942af325f86ae5
+      internalID: 1771138292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e02c05522377c4fac88e9e10d0f686
+      internalID: -999771811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aae78fb3605c2547887a84200812ea3
+      internalID: 572653722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b250eaecd70be4699a638d980448d5
+      internalID: 1306565191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98985b34c92d157469d8c7c14f4178c0
+      internalID: -1349829741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3659
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbf57cc21a5a3044a267bf64561f456
+      internalID: 2477179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4261
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2a508fdabf6474d8996a8039c04f1d
+      internalID: 425344207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18be79f3ddd05954ea34f7495b267fe8
+      internalID: -1912567405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 5458
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539cfc80b31f21b4fb554f31f444c384
+      internalID: -1228860714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 6060
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c5c66649af9a4418f8db940cfb3579
+      internalID: -1630835596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6659
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1002b22853ba9a4480378c0bc726a71
+      internalID: -91559803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 7257
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58d61dea4c92174e81e472a01f347fe
+      internalID: -590590342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 7860
+        y: 468
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930ba313af8c22d41afcb8fe3746986b
+      internalID: -1013229831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca2e1feea23de0419db8d21d5c6a39d
+      internalID: -1513458537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bbd947fb9846514b95edb9c1fd249cc
+      internalID: -75783126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ddc0db53160ba4982516fc3fad14c5
+      internalID: -2104450705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486b0efc0bb022d4a998ebfb18565982
+      internalID: -1005307305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40233dcb62d65774e8fa75c08d116aa9
+      internalID: -1298650164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496ffe1ee7e736e42ba2f983cba6d9fa
+      internalID: -827509572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 3659
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f49ce05a39e5a64ab6463601190f2b9
+      internalID: -1974025369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 4261
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50b1aee97f2bda42b9f709aa4a1b01a
+      internalID: -1412631386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.4821291}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bd3ac1b60b5f04691c196977936f6d
+      internalID: -380453649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 5458
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c3b6bbb9aeaa54ea72bf24d9a90a4e
+      internalID: -1589358025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 6060
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db86ad844fb1bad43a201be69b2b9308
+      internalID: 1323816603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 6659
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82307fe120ae8b041ac2ae48c43bf5b1
+      internalID: -562811125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 7259
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4846b4c89cfad644a7276aa041f50c2
+      internalID: 2122393854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 2 Attack Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 7860
+        y: 68
+        width: 474
+        height: 276
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287fe27785d27c34a9e6ac36e5d3be58
+      internalID: 1018571550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemy 2 Attack Spritesheet_0: 131791993
+      Enemy 2 Attack Spritesheet_1: 1771138292
+      Enemy 2 Attack Spritesheet_10: -1630835596
+      Enemy 2 Attack Spritesheet_11: -91559803
+      Enemy 2 Attack Spritesheet_12: -590590342
+      Enemy 2 Attack Spritesheet_13: -1013229831
+      Enemy 2 Attack Spritesheet_14: -1513458537
+      Enemy 2 Attack Spritesheet_15: -75783126
+      Enemy 2 Attack Spritesheet_16: -2104450705
+      Enemy 2 Attack Spritesheet_17: -1005307305
+      Enemy 2 Attack Spritesheet_18: -1298650164
+      Enemy 2 Attack Spritesheet_19: -827509572
+      Enemy 2 Attack Spritesheet_2: -999771811
+      Enemy 2 Attack Spritesheet_20: -1974025369
+      Enemy 2 Attack Spritesheet_21: -1412631386
+      Enemy 2 Attack Spritesheet_22: -380453649
+      Enemy 2 Attack Spritesheet_23: -1589358025
+      Enemy 2 Attack Spritesheet_24: 1323816603
+      Enemy 2 Attack Spritesheet_25: -562811125
+      Enemy 2 Attack Spritesheet_26: 2122393854
+      Enemy 2 Attack Spritesheet_27: 1018571550
+      Enemy 2 Attack Spritesheet_3: 572653722
+      Enemy 2 Attack Spritesheet_4: 1306565191
+      Enemy 2 Attack Spritesheet_5: -1349829741
+      Enemy 2 Attack Spritesheet_6: 2477179
+      Enemy 2 Attack Spritesheet_7: 425344207
+      Enemy 2 Attack Spritesheet_8: -1912567405
+      Enemy 2 Attack Spritesheet_9: -1228860714
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
